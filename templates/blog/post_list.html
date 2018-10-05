@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>¡¡PRUEBA!!</title>
-</head>
-<body>
-
-<div>
-    <center><h1><a href="">Mis practicas</a></h1></center>
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="page-header">
+    <h1><a href="">Mis practicas</a></h1>
 </div>
 	<center><p>Este es el index de mi prueba</p></center>
-	<center><p>Esta Funcionando</p></center>
-
+	<center><p>Hola</p></center>
+	<center><div class="post">{% for post in posts %}
+	<!Este te sirve para traer datos espesificos--{{posts.nombre}}>
+	{{post.nombre}}
+	{{post.matricula}}<br>
+	{{posts}}
+	{% endfor %}
+	</div></center>
 </body>
-</html>
+{% endblock %}
