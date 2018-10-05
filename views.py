@@ -29,3 +29,10 @@ def post_edit(request, matricula_id):
 			form.save()
 		#return redirect('bolg/post_list.html')
 	return render(request, 'blog/post_edit.html', {'form': form})
+
+def post_delete(request, matricula_id):
+	matri = Estudiante.objects.get(matricula=matricula_id)
+	if request.method == "POST":
+		post.delete()
+		#return redirect('bolg/post_list.html')
+	return render(request, 'blog/post_delete.html', {'matri': matri})

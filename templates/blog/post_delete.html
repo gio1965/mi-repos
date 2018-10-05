@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+    {% block content %}
+        <h1>Nuevo post para agregar</h1>
+        <form method="POST" class="post-form">{% csrf_token %}
+            <h3>Eliminar a {{matri.matricula}}</h3>
+            
+            <button type="submit" class="btm btn-danger">Eliminar</button>
+        </form>
+    {% endblock %}
